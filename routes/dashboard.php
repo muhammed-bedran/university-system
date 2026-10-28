@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'prefix' => 'dashboard',
     'as' => 'dashboard.',
+    'middleware' =>['auth:web']
 ], function () {
     Route::get('/index', [DashboardController::class, 'index'])->name('index');
     Route::get('/students', [StudentsController::class, 'index'])->name('students.index');
