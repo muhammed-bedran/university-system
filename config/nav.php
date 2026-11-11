@@ -8,6 +8,16 @@ return [
       'route'=> 'dashboard.index',
     ],
     [
+      'title' => 'قائمة الكليات',
+      'icon' => 'nav-icon fas fa-university',
+      'route'=> 'dashboard.faculties.index',
+    ],
+    [
+      'title' => 'قائمة الأقسام',
+      'icon' => 'nav-icon fas fa-building',
+      'route'=> 'dashboard.departments.index',
+    ],
+    [
       'title' => 'قائمة الطلاب',
       'icon' => 'nav-icon fas fa-user-graduate',
       'route'=> 'dashboard.students.index',
