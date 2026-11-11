@@ -1,19 +1,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            {{-- <label for="name">اسم الطالب</label>
-            <input type="text" class="
-            form-control 
-            @error('name')
-                is-invalid
-            @enderror
-            " name="name" id="name" value="{{ $student->name }}">
-             @if ($errors->has('name'))
-            <p class="text-danger">{{ $errors->first('name') }}</p>
-            @endif 
-            @error('name')
-                <p class="text-danger">{{ $message }}</p>
-            @enderror --}}
+            
             <x-form.input id="name" name="name" type="text" label="ادخل اسم الطالب" :value="$student->name"/>
         </div>
     </div>
@@ -30,6 +18,16 @@
                     
         </div>
 
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <x-form.select 
+            id="department_id" 
+            name="department_id" 
+            label="اختر القسم" 
+            :options="$departments" 
+            :selected="$student->department_id"/>
+        </div>
     </div>
 
 </div>

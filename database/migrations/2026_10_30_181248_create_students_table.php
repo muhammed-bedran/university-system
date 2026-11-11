@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
+            $table->foreignId('department_id')->constrained('departments')->restrictOnDelete();
             $table->string('student_number');
-            $table->string('email');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->timestamps();
         });
     }

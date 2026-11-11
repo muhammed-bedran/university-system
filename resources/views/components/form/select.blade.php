@@ -1,10 +1,10 @@
 @props([
-    'lable'=>'',
+    'label'=>'',
     'name' =>'',
     'options'=> [],
     'selected' => null,
 ])
-<label>{{ $lable }}</label>
+<label>{{ $label }}</label>
 <select name="{{ $name }}" class="form-control @error($name) is-invalid @enderror">
 @foreach ($options as $value => $text )
 
