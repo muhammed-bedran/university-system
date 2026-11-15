@@ -22,5 +22,10 @@ return [
       'icon' => 'nav-icon fas fa-user-graduate',
       'route'=> 'dashboard.students.index',
     ],
+    [
+      'title' => 'التحقق بخطوتين',
+      'icon' => 'nav-icon fas fa-lock',
+      'route'=> 'dashboard.two-factor-auth.index',
+    ],
     
 ];

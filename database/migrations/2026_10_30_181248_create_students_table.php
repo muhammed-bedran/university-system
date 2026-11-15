@@ -20,6 +20,11 @@ return new class extends Migration
             $table->string('password');
             $table->timestamps();
         });
+        Schema::create('student_password_reset_tokens', function (Blueprint $table) {
+            $table->string('email')->primary();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
+        });
     }
 
     // departments
