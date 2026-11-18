@@ -29,5 +29,28 @@
             :selected="$student->department_id"/>
         </div>
     </div>
+<div class="col-md-6">
+    <div class="form-group">
+
+        <x-form.input 
+        id="password" 
+        name="password" 
+        type="password" 
+        :label="$student->exists ? 'كلمة المرور اتركها فارغة ان لم ترد تغييرها': 'كلمة المرور'" 
+        value="" 
+        />
+    </div>
+    <div class="form-group">
+
+        <x-form.input 
+        id="password_confirmation" 
+        name="password_confirmation" 
+        type="password" 
+        :label="$student->exists ? 'تاكيد كلمة المرور اتركها فارغة ان لم ترد تغييرها': 'تاكيد كلمة المرور'" 
+        value="" 
+        />
+    </div>
+</div>
+    
 
 </div>

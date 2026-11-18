@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Department;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class StudentsController extends Controller
 {
@@ -34,9 +35,13 @@ class StudentsController extends Controller
             'email' => 'required|email',
             'student_number' => 'required|unique:students,student_number,except,id',
             'department_id' => 'required|exists:departments,id',
-            // 'password' => 'required|confirmed|min:8',
+            'password' => 'required|confirmed|min:8',
         ]);
         //
+        if($request->input('password'))
+            {
+                $request->merge(['password'=> Hash::make($request->input('password'))]);
+            }
         Student::create($request->all());
         return redirect()->route('dashboard.students.index')->with('success', 'تم الحفظ بنجاح');
     }
@@ -66,8 +71,12 @@ class StudentsController extends Controller
             'email' => 'required|email|unique:students,email,'.$student->id,
             'student_number' => 'required|unique:students,student_number,'.$student->id,
             'department_id' => 'required|exists:departments,id',
-            // 'password' => 'nullable|confirmed|min:8',
+            'password' => 'nullable|confirmed|min:8',
         ]);
+        if($request->input('password'))
+            {
+                $student->password = Hash::make($request->input('password'));
+            }
        $student->update($request->all());
        return redirect()->route('dashboard.students.index')->with('success', 'تم التعديل بنجاح');
     }

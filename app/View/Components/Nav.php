@@ -9,13 +9,13 @@ use Illuminate\View\Component;
 class Nav extends Component
 {
     public $items;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(?string $config = null)
     {
-        //
-        $this->items = config('nav');
+        $this->items = config($config ?? 'nav');
     }
 
     /**
@@ -23,8 +23,8 @@ class Nav extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.nav',[
-           'items' => $this->items
+        return view('components.nav', [
+            'items' => $this->items,
         ]);
     }
 }

@@ -25,14 +25,14 @@ class FortifyServiceProvider extends ServiceProvider
     {
         //
         $request = request();
-        if ($request->is('students/*'))  // users/faculties   users/students ,      users/departments
+        if ($request->is('student/*'))  // users/faculties   users/students ,      users/departments
         {
             // Custom logic for users routes
             Config::set('fortify.guard', 'student');
             Config::set('fortify.passwords', 'students');
-            Config::set('fortify.home', '/student/dashboard/index');
+            Config::set('fortify.home', '/student/dashboard');
             Config::set('fortify.prefix', 'student');
-        } else{
+        } else {
             Config::set('fortify.guard', 'web');
             Config::set('fortify.passwords', 'users');
             Config::set('fortify.home', '/user/dashboard/index');
@@ -68,7 +68,7 @@ class FortifyServiceProvider extends ServiceProvider
                 ($credentialId ?: $request->session()->getId()) . '|' . $request->ip()
             );
         });
-        if (Config::get('fortify.guard') == 'student') {
+        if (Config::get('fortify.guard') === 'student') {
 
             Fortify::viewPrefix('students.auth.');
         } else {
