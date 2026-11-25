@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19a030ff724ce1b25dd884230b1b7cf5",
+    "content-hash": "ef9454cc27135f4aad7d0d54d9126e8c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2312,6 +2312,84 @@
                 }
             ],
             "time": "2026-03-08T20:05:35+00:00"
+        },
+        {
+            "name": "melbedran/multira",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/muhammed-bedran/Multira.git",
+                "reference": "447a98ca4c2924e3f0e4ef24c71c43dee0bfec91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/muhammed-bedran/Multira/zipball/447a98ca4c2924e3f0e4ef24c71c43dee0bfec91",
+                "reference": "447a98ca4c2924e3f0e4ef24c71c43dee0bfec91",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "^11.0|^12.0",
+                "illuminate/console": "^11.0|^12.0",
+                "illuminate/contracts": "^11.0|^12.0",
+                "illuminate/filesystem": "^11.0|^12.0",
+                "illuminate/http": "^11.0|^12.0",
+                "illuminate/routing": "^11.0|^12.0",
+                "illuminate/session": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "illuminate/view": "^11.0|^12.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.0|^10.0",
+                "phpunit/phpunit": "^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Multira": "Melbedran\\Multira\\Facades\\Multira"
+                    },
+                    "providers": [
+                        "Melbedran\\Multira\\MultiraServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Melbedran\\Multira\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Melbedran",
+                    "homepage": "https://github.com/muhammed-bedran"
+                }
+            ],
+            "description": "General-purpose Laravel localization: locale-prefixed URLs like mcamara, plus optional JSON model translations. No Google Translate.",
+            "homepage": "https://github.com/muhammed-bedran/Multira",
+            "keywords": [
+                "i18n",
+                "laravel",
+                "locale",
+                "localization",
+                "mcamara",
+                "melbedran",
+                "multilingual",
+                "multira",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/muhammed-bedran/Multira/issues",
+                "source": "https://github.com/muhammed-bedran/Multira"
+            },
+            "time": "2026-11-01T21:16:12+00:00"
         },
         {
             "name": "monolog/monolog",

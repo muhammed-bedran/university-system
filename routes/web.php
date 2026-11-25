@@ -1,10 +1,16 @@
 <?php
 
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Melbedran\Multira\Facades\Multira;
 
-Route::get('/', function () {
-    return view('welcome');
+Multira::routes(function(){
+
+    // Route::get('/', function () {
+    //     return view('layouts.website.index');
+    // });
+    Route::get('/',[HomeController::class,'index']);
 });
 
 //require __DIR__.'/auth.php';
