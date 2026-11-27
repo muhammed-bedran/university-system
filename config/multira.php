@@ -139,6 +139,7 @@ return [
     'groups' => [
         // 'posts' => \App\Models\Post::class,
         // 'pages' => \App\Models\Page::class,
+        'faculties' => \App\Models\Faculty::class,
     ],
 
     /*

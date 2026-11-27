@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ Multira::getCurrentLocale() }}" dir="{{ Multira::getCurrentLocaleDirection() }}">
+
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>نظام الجامعة |   @yield('title')</title>
+    <title> {{ __('dashboard.brand') }} |   @yield('title')</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="{{asset('dashboard/plugins/fontawesome-free/css/all.min.css')}}">
@@ -22,17 +23,20 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="starter.html" class="nav-link">الرئيسية</a>
+                    <a href="starter.html" class="nav-link">{{ __('dashboard.home') }}</a>
                 </li>
                     @yield('breadcrumb')
-
+                    <li class="nav-item d-flex align-items-center px-2">
+                    <x-multira-switcher />
+                    </li>
 
                     <li class="nav-item d-none d-sm-inline-block">
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
-                            <button type="submit" class="btn btn-danger">تسجيل الخروج</button>
+                            <button type="submit" class="btn btn-danger"> {{ __('dashboard.logout') }} </button>
                         </form>
                     </li>
+                    
 
 
 

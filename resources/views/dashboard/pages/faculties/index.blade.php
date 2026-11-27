@@ -85,7 +85,7 @@
                     @foreach ($faculties as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                             <td><strong> {{ $item->name }} </strong></td>
+                             <td><strong> {{ $item->getTranslation('name') }} </strong></td>
                             <td>{{ $item->code }}</td>
                             <td class="actions-cell">
                                 <div class="table-actions">

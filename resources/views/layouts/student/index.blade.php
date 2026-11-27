@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ Multira::getCurrentLocale() }}" dir="{{ Multira::getCurrentLocaleDirection() }}">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>بوابة الطالب | @yield('title')</title>
+    <title> {{ __('student.brand') }} | @yield('title')</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="{{ asset('dashboard/plugins/fontawesome-free/css/all.min.css') }}">
@@ -25,10 +25,13 @@
                     <a href="{{ route('student.dashboard') }}" class="nav-link">الرئيسية</a>
                 </li>
                 @yield('breadcrumb')
+                        <li class="nav-item d-flex align-items-center px-2">
+                            <x-multira-switcher />
+                        </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
-                        <button type="submit" class="btn btn-danger">تسجيل الخروج</button>
+                        <button type="submit" class="btn btn-danger">{{ __('student.logout') }} </button>
                     </form>
                 </li>
             </ul>
@@ -36,7 +39,7 @@
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="{{ route('student.dashboard') }}" class="brand-link text-center">
-                <span class="brand-text font-weight-light">بوابة الطالب</span>
+                <span class="brand-text font-weight-light"> {{ __('student.brand') }} </span>
             </a>
 
             <div class="sidebar">

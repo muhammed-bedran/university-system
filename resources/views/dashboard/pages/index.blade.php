@@ -1,10 +1,10 @@
 @extends('layouts.dashboard.index')
 
-@section('title', ' الصفحة الرئيسية')
+@section('title', __('dashboard.nav.home'))
 
 @section('breadcrumb')
     <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">الصفحة الرئيسية </a>
+        <a href="#" class="nav-link">{{ __('dashboard.nav.home') }}</a>
     </li>
 @endsection
 
@@ -13,7 +13,7 @@
 
         <div class="home-topbar">
             <div>
-                <h1>نظرة عامة أكاديمية</h1>
+                <h1>{{ __('dashboard.overview') }}</h1>
                 <p class="home-sub">العام الجامعي 2025 / 2026 — متابعة القبول والجداول والطلبات</p>
             </div>
             <div class="home-topbar-meta">
@@ -49,7 +49,7 @@
         <div class="home-layout">
             <section class="home-panel">
                 <div class="home-panel-head">
-                    <h3>أجندة الأسبوع الأكاديمي</h3>
+                 <h3>{{ __('dashboard.week_agenda') }}</h3>
                     <a href="#">عرض التقويم</a>
                 </div>
                 <div class="home-panel-body">

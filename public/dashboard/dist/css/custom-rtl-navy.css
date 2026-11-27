@@ -14,13 +14,19 @@
 }
 
 /* ── الخط العربي ── */
-body,
+body{
+    font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+}
 html[dir="rtl"] body {
-  font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+
   direction: rtl;
   text-align: right;
 }
+html[dir="ltr"] body {
 
+  direction: ltr;
+  text-align: left;
+}
 /* ── الألوان الكحلية الشفافة ── */
 body.hold-transition {
   background-color: rgba(232, 238, 246, 0.55);

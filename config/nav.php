@@ -3,27 +3,27 @@
 
 return [
     [
-      'title' => 'الصفحة الرئيسية',
+      'title' => 'dashboard.nav.home',
       'icon' => 'nav-icon fas fa-tachometer-alt',
       'route'=> 'dashboard.index',
     ],
     [
-      'title' => 'قائمة الكليات',
+      'title' => 'dashboard.nav.faculties',
       'icon' => 'nav-icon fas fa-university',
       'route'=> 'dashboard.faculties.index',
     ],
     [
-      'title' => 'قائمة الأقسام',
+      'title' => 'dashboard.nav.departments',
       'icon' => 'nav-icon fas fa-building',
       'route'=> 'dashboard.departments.index',
     ],
     [
-      'title' => 'قائمة الطلاب',
+      'title' => 'dashboard.nav.students',
       'icon' => 'nav-icon fas fa-user-graduate',
       'route'=> 'dashboard.students.index',
     ],
     [
-      'title' => 'التحقق بخطوتين',
+      'title' => 'dashboard.nav.two_factor',
       'icon' => 'nav-icon fas fa-lock',
       'route'=> 'dashboard.two-factor-auth.index',
     ],

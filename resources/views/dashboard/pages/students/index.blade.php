@@ -65,7 +65,7 @@
 
                 <a href="{{ route('dashboard.students.create') }}" class="btn btn-primary btn-sm">
 
-                    <i class="fas fa-plus ml-1"></i> إضافة طالب
+                    <i class="fas fa-plus ml-1"></i> {{ __('dashboard.add_student') }} 
 
                 </a>
             </div>

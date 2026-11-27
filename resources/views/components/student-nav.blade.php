@@ -4,7 +4,7 @@
             <li class="nav-item">
                 <a href="{{ route($item['route']) }}" class="nav-link {{ Route::is($item['route']) ? 'active' : '' }}">
                     <i class="{{ $item['icon'] }}"></i>
-                    <p>{{ $item['title'] }}</p>
+                    <p>{{ __($item['title']) }}</p>
                 </a>
             </li>
 
